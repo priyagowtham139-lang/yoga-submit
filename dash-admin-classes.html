@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classes | stackly Yoga Studio</title>
+<meta name="description" content="Manage classes and programs at stackly Yoga Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 8c-2.8 3-4 6.4-4 9 0 4 4 5.5 4 5.5s4-1.5 4-5.5c0-2.6-1.2-6-4-9Z' fill='%23c7a34a'/%3E%3Cpath d='M24 26c-6 2.5-10 7-10 12h20c0-5-4-9.5-10-12Z' fill='%239db8a4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="classes">
+
+<div class="scroll-progress"></div>
+<div class="dash">
+  <aside class="dash-side" id="dashSide">
+    <div class="dash-side-top">
+      <a class="dash-brand" href="index.html" aria-label="stackly Yoga Studio home"><img class="brand-mark logo-white" src="assets/logo-white.webp" alt="stackly Yoga Studio"></a>
+      <button class="dash-close" aria-label="Close menu" type="button"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="dash-user">
+      <span class="au-av">P</span>
+      <div><div class="au-name" id="profileName">Priya Nair</div><div class="au-role" id="roleName">Studio Admin</div></div>
+    </div>
+    <nav class="dash-nav">
+      <a href="dash-admin.html" data-nav="overview"><i class="fa-solid fa-gauge-high"></i>Overview</a>
+      <a href="dash-admin-members.html" data-nav="members"><i class="fa-solid fa-users"></i>Members</a>
+      <a href="dash-admin-classes.html" data-nav="classes"><i class="fa-solid fa-spa"></i>Classes</a>
+      <a href="dash-admin-schedule.html" data-nav="schedule"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
+      <a href="dash-admin-settings.html" data-nav="settings"><i class="fa-solid fa-gear"></i>Settings</a>
+    </nav>
+    <a class="dash-exit" href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </aside>
+  <div class="dash-backdrop" id="dashBackdrop"></div>
+  <div class="dash-main">
+    <header class="dash-top">
+      <a class="dash-logo" href="index.html" aria-label="stackly Yoga Studio home"><img src="assets/logo_black.webp" alt="stackly Yoga Studio"></a>
+      <div class="dt-title"><h2>Classes</h2><p>6 programs &bull; 14 today</p></div>
+      <div class="dt-actions">
+        <button class="dt-bell" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="bell-dot"></span></button>
+        <span class="au-av" style="width:44px;height:44px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#241a05;font-weight:700;display:grid;place-items:center;border-radius:50%">P</span>
+      </div>
+      <button class="hamburger" id="dashHamburger" aria-label="Open menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </header>
+    <div class="dash-subbar">
+      <div class="dt-title"><h2>Classes</h2><p>6 programs &bull; 14 today</p></div>
+      <div class="dt-actions">
+        <button class="dt-bell" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="bell-dot"></span></button>
+        <span class="au-av" style="width:44px;height:44px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#241a05;font-weight:700;display:grid;place-items:center;border-radius:50%">P</span>
+      </div>
+    </div>
+    <main class="dash-content">
+      <section class="panel-card">
+        <div class="pc-head"><h3>Program Health</h3><span class="pc-more">Avg. attendance per class</span></div>
+        <div class="dash-grid col3" style="grid-template-columns:repeat(2,1fr)">
+          <div><div class="dl-sub">Vinyasa Flow <span class="badge gold" style="margin-left:.4rem">Bestseller</span></div><div class="dash-progress" style="margin-top:.4rem"><span data-w="95"></span></div></div>
+          <div><div class="dl-sub">Power Sculpt</div><div class="dash-progress" style="margin-top:.4rem"><span data-w="88"></span></div></div>
+          <div><div class="dl-sub">Yin &amp; Restore</div><div class="dash-progress" style="margin-top:.4rem"><span data-w="80"></span></div></div>
+          <div><div class="dl-sub">Hatha Basics</div><div class="dash-progress" style="margin-top:.4rem"><span data-w="71"></span></div></div>
+        </div>
+      </section>
+
+      <section class="panel-card">
+        <div class="pc-head"><h3>Class Roster Today</h3><a class="pc-more" href="404.html">Edit catalog</a></div>
+        <div class="table-scroll" style="border:none">
+          <table class="members-table">
+            <thead><tr><th>Class</th><th>Teacher</th><th>Time</th><th>Booked</th><th>Capacity</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Sunrise Salutation</td><td>Priya Nair</td><td>5:30 AM</td><td>24</td><td>25</td><td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Full</span></td></tr>
+              <tr><td>Vinyasa Flow</td><td>Arjun Mehta</td><td>7:00 AM</td><td>18</td><td>25</td><td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Open</span></td></tr>
+              <tr><td>Breath &amp; Stillness</td><td>Lena Fischer</td><td>12:15 PM</td><td>11</td><td>20</td><td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Open</span></td></tr>
+              <tr><td>Sound Bath</td><td>Lena Fischer</td><td>9:00 AM</td><td>19</td><td>20</td><td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> 1 Left</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel-card" style="border-color:rgba(199,163,74,.5)">
+        <div class="pc-head"><h3>Quick Actions</h3></div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap">
+          <a class="btn btn-gold btn-sm" href="404.html"><i class="fa-solid fa-plus"></i> New Class</a>
+          <a class="btn btn-line btn-sm" href="404.html"><i class="fa-solid fa-users-between-lines"></i> Assign Teacher</a>
+          <a class="btn btn-line btn-sm" href="404.html"><i class="fa-solid fa-repeat"></i> Repeat Booking</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>

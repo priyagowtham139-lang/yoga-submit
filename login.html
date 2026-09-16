@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In | stackly Yoga Studio</title>
+<meta name="description" content="Sign in to your stackly Yoga Studio member or admin dashboard. New here? Create a free account.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 8c-2.8 3-4 6.4-4 9 0 4 4 5.5 4 5.5s4-1.5 4-5.5c0-2.6-1.2-6-4-9Z' fill='%23c7a34a'/%3E%3Cpath d='M24 26c-6 2.5-10 7-10 12h20c0-5-4-9.5-10-12Z' fill='%239db8a4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="login">
+
+<div class="scroll-progress"></div>
+
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="mm-top">
+    <a href="index.html" aria-label="Home"><img class="brand-mark logo-white" src="assets/logo-white.webp" alt="Atma Yoga Studio home"></a>
+    <button class="mm-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" data-nav="home"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="about.html" data-nav="about"><i class="fa-solid fa-leaf"></i>About</a>
+    <a href="classes.html" data-nav="classes"><i class="fa-solid fa-spa"></i>Classes</a>
+    <a href="schedule.html" data-nav="schedule"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
+    <a href="gallery.html" data-nav="gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+    <a href="contact.html" data-nav="contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+  </nav>
+  <a class="mm-signin" href="login.html"><i class="fa-solid fa-user-astronaut"></i>Sign In</a>
+  <div class="mm-foot">
+    <div class="mm-socials">
+      <a href="#" data-social aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" data-social aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" data-social aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" data-social aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</aside>
+
+<main>
+  <div class="auth-shell" style="min-height:calc(100svh - 68px)">
+    <div class="auth-visual">
+      <div class="av-bg">
+        <video autoplay muted loop playsinline>
+          <source src="assets/yoga_haven_compressed.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="av-float"></div>
+      <span class="av-chip"><i class="fa-solid fa-spa"></i> 2600+ yogis already flowing with us</span>
+      <h2>Log in to your <em>daily dose of stillness</em> - your mat is already rolled out.</h2>
+      <div class="chip-float" style="position:relative;display:inline-flex;margin-top:1.2rem;background:rgba(253,250,243,.12);color:var(--gold-2);border:1px solid rgba(255,255,255,.2)"><i class="fa-solid fa-star"></i> First class is on us</div>
+    </div>
+    <div class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <a href="index.html" aria-label="stackly Yoga Studio home"><img class="brand-mark" src="assets/logo_black.webp" alt="stackly Yoga Studio"></a>
+          <a class="auth-home" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+        </div>
+        <div class="auth-switch" role="tablist" aria-label="Account type">
+          <button type="button" role="tab" id="tabUser" class="active"><i class="fa-solid fa-user"></i> User</button>
+          <button type="button" role="tab" id="tabAdmin"><i class="fa-solid fa-user-tie"></i> Admin</button>
+        </div>
+
+        <div id="loginForm" class="panel active">
+          <h1 class="auth-title" id="authTitle">Welcome back, yogi</h1>
+          <p class="auth-sub" id="authSub">Sign in to continue your journey of movement and breath.</p>
+
+          <form id="loginUser" class="auth-inner active">
+            <div class="field ico-left">
+              <label for="uEmail">Email Address</label>
+              <i class="fa-solid fa-envelope field-ico"></i>
+              <input id="uEmail" type="email" placeholder="you@example.com" autocomplete="off" required>
+              <p class="field-err" id="uEmailErr">Only Gmail addresses are allowed.</p>
+            </div>
+            <div class="field pass">
+              <label for="uPass">Password</label>
+              <input id="uPass" type="password" placeholder="Your password" autocomplete="current-password" required>
+              <button type="button" class="eye-toggle" data-target="#uPass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <div class="auth-remember">
+              <label class="check-row"><input type="checkbox" checked> Remember me</label>
+              <a href="404.html">Forgot password?</a>
+            </div>
+            <button class="btn btn-gold btn-lg" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Enter User Dashboard</button>
+          </form>
+
+          <form id="loginAdmin" class="auth-inner">
+            <div class="field ico-left">
+              <label for="aEmail">Admin Email</label>
+              <i class="fa-solid fa-envelope field-ico"></i>
+              <input id="aEmail" type="email" placeholder="admin@thestackly.com" autocomplete="off" required>
+            </div>
+            <div class="field pass">
+              <label for="aPass">Admin Password</label>
+              <input id="aPass" type="password" placeholder="Admin credentials" autocomplete="current-password" required>
+              <button type="button" class="eye-toggle" data-target="#aPass" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <div class="auth-remember">
+              <label class="check-row"><input type="checkbox" checked> Keep me signed in</label>
+              <a href="404.html">Reset access</a>
+            </div>
+            <button class="btn btn-green btn-lg" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Enter Admin Dashboard</button>
+          </form>
+
+          <p class="role-note" id="authNote"><i class="fa-solid fa-circle-info"></i> Select User for the member portal, Admin for studio management.</p>
+        </div>
+
+        <p class="auth-note">New to stackly? <a class="btn btn-gold btn-sm" href="signup.html"><i class="fa-solid fa-user-plus"></i> Create an account</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>

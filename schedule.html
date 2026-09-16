@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule | stackly Yoga Studio</title>
+<meta name="description" content="Weekly yoga timetable, booking process and events at stackly Yoga Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 8c-2.8 3-4 6.4-4 9 0 4 4 5.5 4 5.5s4-1.5 4-5.5c0-2.6-1.2-6-4-9Z' fill='%23c7a34a'/%3E%3Cpath d='M24 26c-6 2.5-10 7-10 12h20c0-5-4-9.5-10-12Z' fill='%239db8a4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="schedule">
+
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="stackly Yoga Studio home">
+      <img class="brand-mark logo-white" src="assets/logo-white.webp" alt="stackly Yoga Studio home">
+      <img class="brand-mark logo-black" src="assets/logo_black.webp" alt="stackly Yoga Studio home">
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="classes.html" data-nav="classes">Classes</a>
+      <a href="schedule.html" data-nav="schedule">Schedule</a>
+      <a href="gallery.html" data-nav="gallery">Gallery</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-gold btn-signin" href="login.html"><i class="fa-solid fa-user-astronaut"></i><span>Sign In</span></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="mm-top">
+    <a href="index.html" aria-label="Home"><img class="brand-mark logo-white" src="assets/logo-white.webp" alt="Atma Yoga Studio home"></a>
+    <button class="mm-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" data-nav="home"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="about.html" data-nav="about"><i class="fa-solid fa-leaf"></i>About</a>
+    <a href="classes.html" data-nav="classes"><i class="fa-solid fa-spa"></i>Classes</a>
+    <a href="schedule.html" data-nav="schedule"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
+    <a href="gallery.html" data-nav="gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+    <a href="contact.html" data-nav="contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+  </nav>
+  <a class="mm-signin" href="login.html"><i class="fa-solid fa-user-astronaut"></i>Sign In</a>
+  <div class="mm-foot">
+    <div class="mm-socials">
+      <a href="#" data-social aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" data-social aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" data-social aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" data-social aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</aside>
+
+<main>
+  <!-- BANNER -->
+  <section class="page-banner" data-sec="banner">
+    <div class="pb-shape s1"></div>
+    <div class="pb-shape s2"></div>
+    <div class="pb-shape s3"></div>
+    <div class="crumb-wrap" style="position:relative;z-index:2">
+      <span class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i>Schedule</span>
+    </div>
+    <h1>Plan Your <em>Week Of Wellness</em></h1>
+    <p class="pb-sub">Sunrise to sunset, our timetable flows like a river. Filter by energy level and lock your spot in seconds.</p>
+  </section>
+
+  <!-- TIMETABLE -->
+  <section class="section" data-sec="timetable">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><span class="dot"></span>This Week</span>
+        <h2 class="sec-title">Weekly <em>Timetable</em></h2>
+        <svg class="ornament" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7 H58 M64 7 H118 M58 7 l6 -6 M64 7 l6 6"/></svg>
+        <p class="lead" style="margin-inline:auto">Highlights across Monday to Sunday. Full month view and waitlists are available on your member dashboard.</p>
+      </div>
+      <div class="table-scroll reveal">
+        <table class="sched">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Teacher</th>
+              <th>Level</th>
+              <th>Status</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-sun"></i></span>Sunrise Salutation</div></td>
+              <td>Mon</td><td>5:30 AM</td><td>Priya Nair</td>
+              <td><span class="badge ghost" style="background:rgba(29,58,45,.1);color:var(--green)">All Levels</span></td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Open</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Book</a></td>
+            </tr>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-fire-flame-curved"></i></span>Power Sculpt</div></td>
+              <td>Tue</td><td>7:00 AM</td><td>Arjun Mehta</td>
+              <td><span class="badge ghost" style="background:rgba(199,163,74,.16);color:#8a6c1f">Advanced</span></td>
+              <td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> 3 Left</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Hurry</a></td>
+            </tr>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-wind"></i></span>Breath &amp; Stillness</div></td>
+              <td>Wed</td><td>12:15 PM</td><td>Lena Fischer</td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> All Levels</span></td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Open</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Book</a></td>
+            </tr>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-moon"></i></span>Yin &amp; Restore</div></td>
+              <td>Thu</td><td>6:30 PM</td><td>Sophia Grant</td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> All Levels</span></td>
+              <td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> 5 Left</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Book</a></td>
+            </tr>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-hot-tub-person"></i></span>Hot 26 Flow</div></td>
+              <td>Fri</td><td>8:00 AM</td><td>Arjun Mehta</td>
+              <td><span class="badge gold" style="background:rgba(199,163,74,.16);color:#8a6c1f">Intermediate</span></td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Open</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Book</a></td>
+            </tr>
+            <tr>
+              <td><div class="c-name"><span class="c-ico"><i class="fa-solid fa-sliders"></i></span>Sound Bath Sunday</div></td>
+              <td>Sun</td><td>9:00 AM</td><td>Lena Fischer</td>
+              <td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> All Levels</span></td>
+              <td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> 2 Left</span></td>
+              <td><a class="btn btn-gold btn-sm" href="login.html">Hurry</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING STEPS -->
+  <section class="section snow" data-sec="booking">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Booking</span>
+        <h2 class="sec-title">Reserve In <em>Three Breaths</em></h2>
+        <p class="lead" style="margin-inline:auto">Bookings open seven days ahead. Members can queue for waitlisted classes at the tap of a button.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal" data-delay="1">
+          <span class="st-num">01</span>
+          <div class="st-ico"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Browse The Grid</h3>
+          <p>Filter classes by level, teacher or time to find your perfect slot.</p>
+        </div>
+        <div class="step reveal" data-delay="2">
+          <span class="st-num">02</span>
+          <div class="st-ico"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Confirm In A Tap</h3>
+          <p>One click books your mat - instant confirmation lands in your inbox.</p>
+        </div>
+        <div class="step reveal" data-delay="3">
+          <span class="st-num">03</span>
+          <div class="st-ico"><i class="fa-solid fa-bell"></i></div>
+          <h3>Get Reminders</h3>
+          <p>SMS and push reminders ensure you never miss a sunrise flow.</p>
+        </div>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:2.4rem">
+        <a class="btn btn-green btn-lg" href="login.html"><i class="fa-solid fa-calendar-check"></i> Manage On Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAY-AS-YOU-GO PASSES -->
+  <section class="section" data-sec="passes">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><span class="dot"></span>Flexible Options</span>
+        <h2 class="sec-title">Pay-As-You-Go <em>Class Passes</em></h2>
+        <svg class="ornament" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7 H58 M64 7 H118 M58 7 l6 -6 M64 7 l6 6"/></svg>
+        <p class="lead" style="margin-inline:auto">No membership? No problem. Grab a pass, roll out your mat and pay only for the classes you take.</p>
+      </div>
+      <div class="plan-grid">
+        <article class="plan tilt reveal" data-delay="1">
+          <div class="plan-name"><i class="fa-solid fa-spa"></i> Drop-In</div>
+          <div class="plan-price"><span class="sym">$</span><span class="amt">22</span><span class="per">/class</span></div>
+          <p class="plan-desc">Perfect when you just need one luminous hour on the mat.</p>
+          <ul class="plan-list">
+            <li><i class="fa-solid fa-check"></i>Single class session</li>
+            <li><i class="fa-solid fa-check"></i>Valid 30 days</li>
+            <li><i class="fa-solid fa-check"></i>Mat &amp; towel included</li>
+            <li class="off"><i class="fa-solid fa-xmark"></i>Guest passes</li>
+          </ul>
+          <a class="btn btn-line btn-sm" href="404.html">Buy Drop-In</a>
+        </article>
+        <article class="plan featured tilt reveal" data-delay="2">
+          <span class="plan-ribbon"><i class="fa-solid fa-crown"></i> Best Value</span>
+          <div class="plan-name"><i class="fa-solid fa-fire"></i> 5-Class Pass</div>
+          <div class="plan-price"><span class="sym">$</span><span class="amt">95</span><span class="per">/pass</span></div>
+          <p class="plan-desc">The sweet spot for steady movers who flow twice a week.</p>
+          <ul class="plan-list">
+            <li><i class="fa-solid fa-check"></i>5 class sessions</li>
+            <li><i class="fa-solid fa-check"></i>Valid 60 days</li>
+            <li><i class="fa-solid fa-check"></i>Mat, towel &amp; lockers</li>
+            <li><i class="fa-solid fa-check"></i>Priority waitlist access</li>
+          </ul>
+          <a class="btn btn-gold" href="404.html">Buy 5-Class Pass</a>
+        </article>
+        <article class="plan tilt reveal" data-delay="3">
+          <div class="plan-name"><i class="fa-solid fa-dumbbell"></i> 10-Class Pass</div>
+          <div class="plan-price"><span class="sym">$</span><span class="amt">170</span><span class="per">/pass</span></div>
+          <p class="plan-desc">A whole season of practice with the lowest per-class rate.</p>
+          <ul class="plan-list">
+            <li><i class="fa-solid fa-check"></i>10 class sessions</li>
+            <li><i class="fa-solid fa-check"></i>Valid 90 days</li>
+            <li><i class="fa-solid fa-check"></i>Mat, towel &amp; lockers</li>
+            <li><i class="fa-solid fa-check"></i>1 workshop credit</li>
+          </ul>
+          <a class="btn btn-line btn-sm" href="404.html">Buy 10-Class Pass</a>
+        </article>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:2.4rem">
+        <p class="lead" style="margin-inline:auto">Passes never expire on unused sessions. Have questions? <a href="contact.html" style="color:var(--gold);font-weight:600">Talk to the front desk <i class="fa-solid fa-arrow-up-right ico"></i></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section top-dark" data-sec="events">
+    <svg class="wave-top" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path class="fill-ivory" d="M0,56 C240,10 420,100 720,60 C1020,20 1240,90 1440,44 L1440,0 L0,0 Z"/></svg>
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow light"><span class="dot"></span>Signature Events</span>
+        <h2 class="sec-title">Weekly Rituals &amp; <em>Monthly Retreats</em></h2>
+        <p class="lead" style="margin-inline:auto;color:rgba(255,255,255,.72)">Beyond the mat - sound baths, moon circles, full-day immersions and away retreats.</p>
+      </div>
+      <div class="class-grid">
+        <article class="class-card tilt reveal">
+          <div class="cc-media">
+            <img src="assets/sound_bath (1).webp" alt="Sound bath" loading="lazy">
+            <span class="cc-ripple"></span><span class="cc-tag"><i class="fa-solid fa-headphones"></i> Ritual</span>
+            <span class="cc-level"><i class="fa-solid fa-moon"></i> Monthly</span>
+          </div>
+          <div class="cc-body">
+            <h3 class="cc-title" style="color:#000">Full Moon Sound Bath</h3>
+            <p class="cc-desc">Crystal bowls, gongs and guided breath under the full moon - a 90 minute deep reset.</p>
+            <a class="btn btn-green btn-sm" style="margin-top:1rem" href="404.html">Reserve $20</a>
+          </div>
+          <span class="cc-hover-line"></span>
+        </article>
+        <article class="class-card tilt reveal" data-delay="2">
+          <div class="cc-media">
+            <img src="assets/newmoon_circle (1).webp" alt="Moon circle" loading="lazy">
+            <span class="cc-ripple"></span><span class="cc-tag"><i class="fa-solid fa-hands-holding-circle"></i> Circle</span>
+            <span class="cc-level"><i class="fa-solid fa-spa"></i> Weekly</span>
+          </div>
+          <div class="cc-body">
+            <h3 class="cc-title" style="color:#000">New Moon Circle</h3>
+            <p class="cc-desc">Intention setting, meditation and community around a firelit circle every new moon evening.</p>
+            <a class="btn btn-green btn-sm" style="margin-top:1rem" href="404.html">Join Free</a>
+          </div>
+          <span class="cc-hover-line"></span>
+        </article>
+        <article class="class-card tilt reveal" data-delay="3">
+          <div class="cc-media">
+            <img src="assets/goa_monsoon.webp" alt="Retreat" loading="lazy">
+            <span class="cc-ripple"></span><span class="cc-tag"><i class="fa-solid fa-umbrella-beach"></i> Retreat</span>
+            <span class="cc-level"><i class="fa-solid fa-mountain-sun"></i> 4 Nights</span>
+          </div>
+          <div class="cc-body">
+            <h3 class="cc-title" style="color:#000">Goa Monsoon Retreat</h3>
+            <p class="cc-desc">Twice daily practice, coastal pranayama and workshops on a private palm-fringed beach.</p>
+            <a class="btn btn-green btn-sm" style="margin-top:1rem" href="404.html">View Itinerary</a>
+          </div>
+          <span class="cc-hover-line"></span>
+        </article>
+      </div>
+    </div>
+    <svg class="wave-bot" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path class="fill-cream" d="M0,64 C240,110 420,10 720,50 C1020,90 1240,20 1440,56 L1440,110 L0,110 Z"/></svg>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top" style="margin-top:1rem">
+    <div class="f-about"><div class="fa-logo"><a class="fa-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" aria-label="Back to top"><img class="brand-mark logo-white" src="assets/logo-white.webp" alt="stackly Yoga Studio home"></a></div>
+        <p class="fa-tag">stackly is a boutique yoga sanctuary devoted to breath, movement and mindful living. Our teachers blend ancient wisdom with modern science.</p>
+      
+      <div class="f-socials">
+        <a href="#" data-social aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" data-social aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" data-social aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" data-social aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" data-social aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="f-acc open">
+      <button class="acc-head">Explore <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="acc-panel">
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+          <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i>Classes</a></li>
+          <li><a href="schedule.html"><i class="fa-solid fa-angle-right"></i>Schedule</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-acc open">
+      <button class="acc-head">Programs <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="acc-panel">
+        <ul>
+          <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i>Vinyasa Flow</a></li>
+          <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i>Power Sculpt</a></li>
+          <li><a href="classes.html"><i class="fa-solid fa-angle-right"></i>Yin &amp; Restore</a></li>
+          <li><a href="schedule.html"><i class="fa-solid fa-angle-right"></i>Sound Baths</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i>Private Coaching</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-contact">
+      <div class="fc-row"><i class="fa-solid fa-location-dot"></i><div><h4>Visit Us</h4>MMR Complex, Periyakollappatty, Chinna Thirupathi,<br>Salem, Tamil Nadu 636008, India</div></div>
+      <div class="fc-row"><i class="fa-solid fa-phone"></i><div><h4>Call Us</h4>+91 70107 92745</div></div>
+      <div class="fc-row"><i class="fa-solid fa-envelope"></i><div><h4>Email</h4>info@thestackly.com</div></div>
+      <div class="fc-row"><i class="fa-solid fa-clock"></i><div><h4>Studio Hours</h4>Mon-Sat: 5:30 AM - 9:30 PM<br>Sun: 6:00 AM - 12:00 PM</div></div>
+    </div>
+  </div>
+  <div class="container footer-bot">
+    <span>&copy; <span class="auth-year">2026</span> stackly Yoga Studio. All rights reserved.</span>
+    <div class="fb-links"><a href="about.html">Privacy</a><a href="about.html">Terms</a><a href="contact.html">Careers</a></div>
+    <span>Crafted with <i class="fa-solid fa-heart heart"></i> at stackly</span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>

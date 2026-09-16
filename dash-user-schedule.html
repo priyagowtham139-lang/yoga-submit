@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Schedule | stackly Yoga Studio</title>
+<meta name="description" content="Your weekly yoga bookings at stackly Yoga Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 8c-2.8 3-4 6.4-4 9 0 4 4 5.5 4 5.5s4-1.5 4-5.5c0-2.6-1.2-6-4-9Z' fill='%23c7a34a'/%3E%3Cpath d='M24 26c-6 2.5-10 7-10 12h20c0-5-4-9.5-10-12Z' fill='%239db8a4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="schedule">
+
+<div class="scroll-progress"></div>
+<div class="dash">
+  <aside class="dash-side" id="dashSide">
+    <div class="dash-side-top">
+      <a class="dash-brand" href="index.html" aria-label="stackly Yoga Studio home"><img class="brand-mark logo-white" src="assets/logo-white.webp" alt="stackly Yoga Studio"></a>
+      <button class="dash-close" aria-label="Close menu" type="button"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="dash-user">
+      <span class="au-av">M</span>
+      <div><div class="au-name" id="profileName">Maya Sharma</div><div class="au-role" id="roleName">Flow Unlimited</div></div>
+    </div>
+    <nav class="dash-nav">
+      <a href="dash-user.html" data-nav="overview"><i class="fa-solid fa-gauge-high"></i>Overview</a>
+      <a href="dash-user-classes.html" data-nav="classes"><i class="fa-solid fa-spa"></i>My Classes</a>
+      <a href="dash-user-schedule.html" data-nav="schedule"><i class="fa-solid fa-calendar-days"></i>My Schedule</a>
+      <a href="dash-user-profile.html" data-nav="profile"><i class="fa-solid fa-circle-user"></i>My Profile</a>
+    </nav>
+    <a class="dash-exit" href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+  </aside>
+  <div class="dash-backdrop" id="dashBackdrop"></div>
+  <div class="dash-main">
+    <header class="dash-top">
+      <a class="dash-logo" href="index.html" aria-label="stackly Yoga Studio home"><img src="assets/logo_black.webp" alt="stackly Yoga Studio"></a>
+      <div class="dt-title"><h2>My Schedule</h2><p>This week &bull; Next week</p></div>
+      <div class="dt-actions">
+        <button class="dt-bell" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="bell-dot"></span></button>
+        <span class="au-av" style="width:44px;height:44px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#241a05;font-weight:700;display:grid;place-items:center;border-radius:50%">M</span>
+      </div>
+      <button class="hamburger" id="dashHamburger" aria-label="Open menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </header>
+    <div class="dash-subbar">
+      <div class="dt-title"><h2>My Schedule</h2><p>This week &bull; Next week</p></div>
+      <div class="dt-actions">
+        <button class="dt-bell" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="bell-dot"></span></button>
+        <span class="au-av" style="width:44px;height:44px;background:linear-gradient(140deg,var(--gold),var(--gold-2));color:#241a05;font-weight:700;display:grid;place-items:center;border-radius:50%">M</span>
+      </div>
+    </div>
+    <main class="dash-content">
+      <section class="panel-card">
+        <div class="pc-head"><h3>This Week</h3><span class="pc-more">5:30 AM starts are on</span></div>
+        <div class="sched-strip" style="grid-template-columns:repeat(7,1fr)">
+          <div class="day-chip active"><div class="dc-day">Mon</div><div class="dc-num">5</div><div class="dc-count">2 booked</div></div>
+          <div class="day-chip"><div class="dc-day">Tue</div><div class="dc-num">6</div><div class="dc-count">1 booked</div></div>
+          <div class="day-chip"><div class="dc-day">Wed</div><div class="dc-num">5</div><div class="dc-count">free</div></div>
+          <div class="day-chip"><div class="dc-day">Thu</div><div class="dc-num">4</div><div class="dc-count">1 booked</div></div>
+          <div class="day-chip"><div class="dc-day">Fri</div><div class="dc-num">5</div><div class="dc-count">free</div></div>
+          <div class="day-chip"><div class="dc-day">Sat</div><div class="dc-num">4</div><div class="dc-count">free</div></div>
+          <div class="day-chip"><div class="dc-day">Sun</div><div class="dc-num">3</div><div class="dc-count">free</div></div>
+        </div>
+      </section>
+
+      <section class="panel-card">
+        <div class="pc-head"><h3>Upcoming Bookings</h3><a class="pc-more" href="404.html">Full timetable</a></div>
+        <div class="table-scroll" style="border:none">
+          <table class="members-table">
+            <thead><tr><th>Class</th><th>Day</th><th>Time</th><th>Studio</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Sunrise Salutation</td><td>Mon</td><td>5:30 AM</td><td>A</td><td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Booked</span></td><td><a class="btn btn-line btn-sm" href="404.html">Cancel</a></td></tr>
+              <tr><td>Vinyasa Flow</td><td>Tue</td><td>7:00 AM</td><td>B</td><td><span class="badge green"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Booked</span></td><td><a class="btn btn-line btn-sm" href="404.html">Cancel</a></td></tr>
+              <tr><td>Yin &amp; Restore</td><td>Thu</td><td>6:30 PM</td><td>B</td><td><span class="badge gold"><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Waitlist</span></td><td><span class="badge ghost" style="color:var(--muted)">In queue</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dash-welcome" style="flex:none">
+        <span class="eyebrow light"><span class="dot"></span>Smart Tip</span>
+        <h2>Keep your 12-day streak <em>alive</em></h2>
+        <p>Book tomorrow's class now - you are 3 visits from a new all-time record and a free member reward.</p>
+        <div class="dw-chips"><span><i class="fa-solid fa-bolt"></i> Streak shield active until Sunday</span></div>
+      </section>
+    </main>
+  </div>
+</div>
+<button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>
