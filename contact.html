@@ -103,7 +103,7 @@
         <div class="reveal lft">
           <span class="eyebrow"><span class="dot"></span>Drop A Note</span>
           <h2 class="sec-title">Start A <em>Conversation</em></h2>
-          <form class="form-grid" onsubmit="event.preventDefault();window.location.href='404.html';" style="margin-top:1.6rem">
+          <form class="form-grid" id="cForm" novalidate style="margin-top:1.6rem">
             <div class="field full">
               <label for="cname">Full Name</label>
               <input id="cname" type="text" placeholder="Your name" required>
@@ -116,22 +116,25 @@
             </div>
             <div class="field">
               <label for="cphone">Phone</label>
-              <input id="cphone" type="tel" placeholder="+91 00000 00000">
+              <input id="cphone" type="tel" placeholder="+91 00000 00000" required>
               <span class="field-err"><i class="fa-solid fa-circle-exclamation"></i> Only numerals are allowed</span>
             </div>
             <div class="field full">
               <label for="csubject">Subject</label>
               <select id="csubject">
+                <option value="">Select a subject</option>
                 <option>Book a trial class</option>
                 <option>Private coaching</option>
                 <option>Corporate wellness</option>
                 <option>Retreat enquiry</option>
                 <option>Something else</option>
               </select>
+              <span class="field-err" id="csubjectErr"><i class="fa-solid fa-circle-exclamation"></i> Please select a subject</span>
             </div>
             <div class="field full">
               <label for="cmsg">Message</label>
-              <textarea id="cmsg" rows="5" placeholder="Tell us how we can help..."></textarea>
+              <textarea id="cmsg" rows="5" placeholder="Tell us how we can help..." required></textarea>
+              <span class="field-err" id="cmsgErr"><i class="fa-solid fa-circle-exclamation"></i> Please enter your message</span>
             </div>
             <div class="field full">
               <button class="btn btn-gold btn-lg" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
