@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<script>
+(function() { try { if (sessionStorage.getItem('stackly.goto')) { document.documentElement.classList.add('resume-pending'); if ('scrollRestoration' in history) history.scrollRestoration='manual'; } } catch(e){} })();
+</script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="profile">
@@ -75,7 +78,7 @@
         <ul class="dash-list">
           <li><span class="dl-ico"><i class="fa-solid fa-bell"></i></span><div class="dl-info"><div class="dl-title">Class reminders</div><div class="dl-sub">30 minutes before each booking</div></div><span class="badge green"><i class="fa-solid fa-check"></i> On</span></li>
           <li><span class="dl-ico"><i class="fa-solid fa-ticket"></i></span><div class="dl-info"><div class="dl-title">Waitlist offers</div><div class="dl-sub">Let me know when a spot opens</div></div><span class="badge green"><i class="fa-solid fa-check"></i> On</span></li>
-          <li><span class="dl-ico"><i class="fa-solid fa-newspaper"></i></span><div class="dl-info"><div class="dl-title">Studio newsletter</div><div class="dl-sub">Monthly stories, events and recipes</div></div><span class="badge gold"><i class="fa-solid fa-pen"></i> Edit</span></li>
+          <li><span class="dl-ico"><i class="fa-solid fa-newspaper"></i></span><div class="dl-info"><div class="dl-title">Studio newsletter</div><div class="dl-sub">Monthly stories, events and recipes</div></div><span class="badge gold"><a class="badge-link" href="404.html"><i class="fa-solid fa-pen"></i> Edit</a></span></li>
         </ul>
       </section>
 

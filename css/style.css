@@ -36,7 +36,14 @@ body{
   font-size:16px;
   -webkit-font-smoothing:antialiased;
 }
+html.resume-pending{visibility:hidden}
 img,video,svg,canvas,iframe{max-width:100%;display:block}
+video::-webkit-media-controls{display:none!important}
+video::-webkit-media-controls-panel{display:none!important}
+video::-webkit-media-controls-overlay-play-button{display:none!important}
+video::-webkit-media-controls-mute-button{display:none!important}
+video::-webkit-media-controls-volume-slider{display:none!important}
+video::-webkit-media-controls-start-playback-button{display:none!important}
 a{text-decoration:none;color:inherit}
 ul,ol{list-style:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
@@ -131,7 +138,7 @@ input,textarea,select{font-family:inherit;font-size:1rem}
 .brand .brand-mark{height:42px;width:auto;flex:none;filter:drop-shadow(0 2px 6px rgba(16,27,22,.45))}
 .brand .brand-mark.logo-black{display:none}
 .site-header.is-scrolled .brand .brand-mark.logo-white{display:none}
-.site-header.is-scrolled .brand .brand-mark.logo-black{display:block;height:26px}
+.site-header.is-scrolled .brand .brand-mark.logo-black{display:block;height:36px}
 .brand .brand-text{font-family:var(--font-head);font-weight:700;font-size:1.5rem;letter-spacing:.02em;color:var(--green);line-height:1}
 .brand .brand-text em{display:block;font-style:italic;font-size:.62rem;letter-spacing:.5em;color:var(--gold);text-transform:uppercase;margin-top:2px}
 .desktop-nav{display:flex;gap:.4rem}
@@ -653,6 +660,8 @@ table.sched .c-name{display:flex;align-items:center;gap:.8rem;font-weight:600}
 table.sched .c-ico{width:38px;height:38px;flex:none;border-radius:12px;display:grid;place-items:center;background:linear-gradient(140deg,var(--sage-2),#eef3ee);color:var(--green)}
 .badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:600;letter-spacing:.1em;padding:.4rem .9rem;border-radius:999px}
 .badge.gold{background:rgba(199,163,74,.16);color:#8a6c1f}
+.badge-link{display:inline-flex;align-items:center;gap:.4rem;color:inherit;cursor:pointer;transition:.3s}
+.badge-link:hover{color:var(--green)}
 .badge.green{background:rgba(29,58,45,.1);color:var(--green)}
 .badge.ghost{background:rgba(255,255,255,.14);color:#fff}
 

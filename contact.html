@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<script>
+(function() { try { if (sessionStorage.getItem('stackly.goto')) { document.documentElement.classList.add('resume-pending'); if ('scrollRestoration' in history) history.scrollRestoration='manual'; } } catch(e){} })();
+</script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="contact">
@@ -100,7 +103,7 @@
         <div class="reveal lft">
           <span class="eyebrow"><span class="dot"></span>Drop A Note</span>
           <h2 class="sec-title">Start A <em>Conversation</em></h2>
-          <form class="form-grid" onsubmit="event.preventDefault();alert('Thank you! Our team will reply within 4 hours.');this.reset();" style="margin-top:1.6rem">
+          <form class="form-grid" onsubmit="event.preventDefault();window.location.href='404.html';" style="margin-top:1.6rem">
             <div class="field full">
               <label for="cname">Full Name</label>
               <input id="cname" type="text" placeholder="Your name" required>
@@ -263,7 +266,7 @@
   </div>
   <div class="container footer-bot">
     <span>&copy; <span class="auth-year">2026</span> stackly Yoga Studio. All rights reserved.</span>
-    <div class="fb-links"><a href="about.html">Privacy</a><a href="about.html">Terms</a><a href="contact.html">Careers</a></div>
+    <div class="fb-links"><a href="404.html">Privacy</a><a href="404.html">Terms</a><a href="404.html">Careers</a></div>
     <span>Crafted with <i class="fa-solid fa-heart heart"></i> at stackly</span>
   </div>
 </footer>

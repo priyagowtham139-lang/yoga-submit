@@ -268,6 +268,17 @@
     } catch (err) {}
   });
 
+  document.addEventListener("click", function (e) {
+    var bell = e.target && e.target.closest ? e.target.closest(".dt-bell") : null;
+    if (!bell) return;
+    var pageName = window.location.pathname.split("/").pop() || "index.html";
+    try {
+      sessionStorage.setItem("stackly.back", pageName);
+      sessionStorage.setItem("stackly.backScroll", String(window.scrollY));
+    } catch (err) {}
+    window.location.href = "404.html";
+  });
+
   /* ---------- 404 go back ---------- */
   var goBack = $("#goBackBtn");
   if (goBack) {
@@ -302,23 +313,20 @@
     try { resumeScroll = parseInt(sessionStorage.getItem("stackly.gotoScroll"), 10) || 0; } catch (err) {}
     try { sessionStorage.removeItem("stackly.gotoScroll"); } catch (err) {}
     var hash = resume.split("#")[1];
-    if (hash || resumeScroll > 0) {
-      function jump() {
-        setTimeout(function () {
-          if (resumeScroll > 0) {
-            window.scrollTo({ top: resumeScroll, behavior: "auto" });
-            return;
-          }
-          var t = document.getElementById(hash);
-          if (t) {
-            var y = t.getBoundingClientRect().top + window.scrollY - 84;
-            window.scrollTo({ top: Math.max(y, 0), behavior: "auto" });
-          }
-        }, 380);
+    function jump() {
+      document.documentElement.style.scrollBehavior = "auto";
+      var t = hash ? document.getElementById(hash) : null;
+      if (resumeScroll > 0) {
+        window.scrollTo({ top: resumeScroll, behavior: "auto" });
+      } else if (t) {
+        var y = Math.max(t.getBoundingClientRect().top + window.scrollY - 84, 0);
+        window.scrollTo({ top: y, behavior: "auto" });
       }
-      if (document.readyState !== "complete") window.addEventListener("load", jump);
-      else setTimeout(jump, 250);
+      document.documentElement.classList.remove("resume-pending");
+      document.documentElement.style.scrollBehavior = "";
     }
+    if (document.readyState !== "complete") window.addEventListener("load", jump);
+    else jump();
   }
 
   /* ---------- to top ---------- */
@@ -345,9 +353,15 @@
       ov.addEventListener("click", function () {
         if (v.paused) {
           v.play();
-          v.controls = true;
           ov.style.opacity = "0";
           ov.style.pointerEvents = "none";
+        }
+      });
+      v.addEventListener("click", function () {
+        if (!v.paused) {
+          v.pause();
+          ov.style.opacity = "1";
+          ov.style.pointerEvents = "auto";
         }
       });
     }

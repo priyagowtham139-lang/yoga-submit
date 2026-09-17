@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+<script>
+(function() { try { if (sessionStorage.getItem('stackly.goto')) { document.documentElement.classList.add('resume-pending'); if ('scrollRestoration' in history) history.scrollRestoration='manual'; } } catch(e){} })();
+</script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="login">
@@ -62,8 +65,8 @@
           <a class="auth-home" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
         </div>
         <div class="auth-switch" role="tablist" aria-label="Account type">
-          <button type="button" role="tab" id="tabUser" class="active"><i class="fa-solid fa-user"></i> User</button>
-          <button type="button" role="tab" id="tabAdmin"><i class="fa-solid fa-user-tie"></i> Admin</button>
+          <button type="button" role="tab" id="tabUser" class="active"><i class="fa-solid fa-user"></i> Yogi</button>
+          <button type="button" role="tab" id="tabAdmin"><i class="fa-solid fa-user-tie"></i> Trainer</button>
         </div>
 
         <div id="loginForm" class="panel active">
@@ -107,7 +110,7 @@
             <button class="btn btn-green btn-lg" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Enter Admin Dashboard</button>
           </form>
 
-          <p class="role-note" id="authNote"><i class="fa-solid fa-circle-info"></i> Select User for the member portal, Admin for studio management.</p>
+          <p class="role-note" id="authNote"><i class="fa-solid fa-circle-info"></i> Select Yogi for the member portal, Trainer for studio management.</p>
         </div>
 
         <p class="auth-note">New to stackly? <a class="btn btn-gold btn-sm" href="signup.html"><i class="fa-solid fa-user-plus"></i> Create an account</a></p>
